@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -34,10 +35,13 @@ class MainActivity : ComponentActivity() {
 
         next.setOnClickListener {
             changeImage(next = true)
+            Toast.makeText(applicationContext , "next page", Toast.LENGTH_SHORT).show()
         }
 
         prev.setOnClickListener {
             changeImage(next = false)
+            Toast.makeText(applicationContext , "previous page", Toast.LENGTH_SHORT).show()
+
         }
 
     }
